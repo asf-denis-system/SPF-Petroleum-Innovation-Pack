@@ -133,9 +133,10 @@ Pack может определить дополнительные виды дл�
 | Код | Контекст | Уровень | Репо |
 |-----|----------|---------|------|
 | `SPF` | Second Principles Framework | Framework | SPF/ |
-| `PD` | Personal Development | Pack | spf-personal-pack/ |
-| `DP` | Digital Platform | Pack | spf-digital-platform-pack/ |
-| `EC` | Ecosystem | Pack | spf-ecosystem-pack/ |
+| `PD` | Personal Development | Pack | PACK-personal/ |
+| `DP` | Digital Platform | Pack | PACK-digital-platform/ |
+| `EC` | Ecosystem | Pack | PACK-ecosystem/ |
+| `MIM` | Мастерская инженеров-менеджеров | Pack | PACK-MIM/ |
 
 Требования к новому коду контекста:
 
