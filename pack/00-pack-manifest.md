@@ -154,8 +154,8 @@ Pack отвечает на вопросы:
 
 | Section | Item Count | Status |
 |---------|------------|--------|
-| Distinctions | 8 | complete |
-| Roles | 5 | complete |
+| Distinctions | 10 | complete |
+| Roles | 6 | complete |
 | Physical Principles | 5 | complete |
 | System Principles | 7 | complete |
 | Innovation Principles | 4 | complete |
@@ -163,7 +163,7 @@ Pack отвечает на вопросы:
 | Drilling Principles | 2 | complete |
 | Waterflooding Principles | 2 | complete |
 | Methods | 10 | complete (index) |
-| Work Products | 2 | complete (methodology + template) |
+| Work Products | 3 | complete (methodology + template + three-pipeline model) |
 | Failure Modes Catalog | 12 | complete |
 | SoTA Annotations | 10 | complete |
 
@@ -205,3 +205,4 @@ Pack отвечает на вопросы:
 | Date | Change | Author |
 |------|--------|--------|
 | 2026-02-19 | Начальная создание pack structure; агрегация 21 принципа | Асфандияров |
+| 2026-02-21 | Добавлена модель трёх конвейеров (WP.ThreePipelines); новые различения D.009, D.010; новая роль R.006 (Владелец стыка); расширен bounded context | — |
