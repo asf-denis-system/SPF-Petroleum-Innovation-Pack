@@ -177,9 +177,11 @@ Pack отвечает на вопросы:
 | Org Principles | 4 | Shape | complete |
 | Drilling Principles | 2 | Shape | complete |
 | Waterflooding Principles | 2 | Shape | complete |
+| Work Principles (OA.EW) | 2 | Shape | complete (OA.EW.001–002) |
+| Register Bridge | 1 | Shape | complete (01D-register-bridge.md) |
 | Methods | 10 | Shape | complete (index) |
-| Work Products | 3 | Shape | complete (methodology + template + three-pipeline model) |
-| Failure Modes Catalog | 12 | Shape | complete |
+| Work Products | 5 | Shape | complete (methodology + template + three-pipelines + register bridge + work ledger) |
+| Failure Modes Catalog | 13 | Shape | complete (incl. FM.EW.001) |
 | SoTA Annotations | 10 | Shape | complete |
 
 ---
@@ -223,3 +225,4 @@ Pack отвечает на вопросы:
 | 2026-02-21 | Добавлена модель трёх конвейеров (WP.ThreePipelines); новые различения D.009, D.010; новая роль R.006 (Владелец стыка); расширен bounded context | — |
 | 2026-02-21 | Переопределена целевая система: нефть (не пласт); пласт/скважины/инфра — управляющие системы; обновлены bounded context v0.2.0, D.001, manifest | — |
 | 2026-02-22 | FPF compliance: добавлен DRR (01C, 4 записи DRR.001–004); обновлены lifecycle статусы (Explore/Shape/Evidence/Operate); добавлен FPF→SPF Bridge в manifest | Асфандияров |
+| 2026-02-22 | Economic Work extension: Register Bridge (01D), Work-Ledger шаблон (WP.04), OA.EW.001–002, FM.EW.001 — разделение физического и экономического регистров | Асфандияров |
