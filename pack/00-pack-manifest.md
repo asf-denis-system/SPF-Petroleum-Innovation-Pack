@@ -86,25 +86,39 @@ Pack отвечает на вопросы:
 
 ## Dependencies
 
+### FPF→SPF Bridge Declaration
+
+**Тип отношения:** SPF является **Production Layer** поверх FPF.
+
+| Уровень | Фреймворк | Роль |
+|---------|-----------|------|
+| Meta-уровень | FPF (First Principles Framework) | Задаёт мета-онтологию: System, State, Agent, Method, Work Product, Failure Mode |
+| Production Layer | SPF (Second Principles Framework) | Операционализирует FPF-концепты для конкретной области |
+| Domain Pack | upstream-petroleum (этот pack) | Применяет SPF к upstream petroleum |
+
+**Правило приоритета:** При конфликте интерпретаций FPF имеет приоритет над SPF; SPF имеет приоритет над доменными конвенциями pack'а.
+
+**Rationale:** см. [DRR.003](01-domain-contract/01C-design-rationale.md#drr003--spf-как-production-layer-поверх-fpf)
+
 ### FPF Distinctions Used
 
-| FPF Distinction | How Used in This Pack |
-|-----------------|----------------------|
-| **System** | Пластовая система как объект управления |
-| **State** | Состояние целевой системы (пласт: давление, насыщение, энергия) |
-| **Dynamics** | Поведение системы во времени — запаздывание, переходные режимы, равновесие |
-| **Control/Intervention** | Вмешательства в систему (скважины, ППД, ГРП, ГТМ) и их последствия |
-| **Uncertainty** | Неопределённость подземного пространства и её неустранимость |
-| **Feedback & Coupling** | Обратные связи между компонентами; отсутствие локальности действий |
-| **Work product** | План разработки, квалификационные документы, матрица решений |
-| **Failure mode** | Типовые ошибки интерпретации принципов |
+| FPF Distinction | SPF Концепт | How Used in This Pack |
+|-----------------|-------------|----------------------|
+| **System** | U.Systems | Нефть как целевая система; пласт/скважины/ППД как управляющие системы |
+| **State** | Состояние нефти | Измеримый факт о стадии нефти: локализована, добыта, подготовлена |
+| **Dynamics** | Конвейер нефти | Сквозная цепочка состояний нефти от «запасы» до «НПЗ» |
+| **Control/Intervention** | ГТМ / ППД / бурение | Вмешательства, переводящие нефть в следующее состояние |
+| **Uncertainty** | U.Episteme / Неопределённость | ГДМ как гипотеза; L0–L3 confidence levels |
+| **Feedback & Coupling** | Запаздывание реакции | Пласт реагирует с задержкой; взаимовлияния скважин |
+| **Work product** | Артефакт-доказательство | Переход нефти засчитывается только при наличии артефакта (INV.001) |
+| **Failure mode** | FM.* | Типовые ошибки при нарушении вторых принципов |
 
 ### Relationship to Other SPF Packs
 
 | Pack | Тип связи | Описание |
 |------|-----------|----------|
 | SPF — Second Principles Framework | Parent | Этот pack следует SPF структуре и процессам |
-| FPF — First Principles Framework | Upstream | Базовая мета-онтология |
+| FPF — First Principles Framework | Upstream meta-framework | Базовая мета-онтология; приоритет при конфликтах |
 | kids-learning-pack (опционально) | Pedagogical | Может быть переиспользован в обучении специалистов |
 
 ---
@@ -140,7 +154,7 @@ Pack отвечает на вопросы:
 
 | Раздел | Назначение |
 |--------|-----------|
-| **01-domain-contract** | Ограниченный контекст, словарь, онтология |
+| **01-domain-contract** | Ограниченный контекст, словарь, онтология; DRR (Design Rationale Records) |
 | **02-domain-entities** | Вторые принципы по блокам (физические, системные, инновационные) |
 | **03-methods** | Методы верификации принципов в проекте |
 | **04-work-products** | План разработки, матрица решений, квалификационные документы |
@@ -152,20 +166,21 @@ Pack отвечает на вопросы:
 
 ## Content Summary
 
-| Section | Item Count | Status |
-|---------|------------|--------|
-| Distinctions | 10 | complete |
-| Roles | 6 | complete |
-| Physical Principles | 5 | complete |
-| System Principles | 7 | complete |
-| Innovation Principles | 4 | complete |
-| Org Principles | 4 | complete |
-| Drilling Principles | 2 | complete |
-| Waterflooding Principles | 2 | complete |
-| Methods | 10 | complete (index) |
-| Work Products | 3 | complete (methodology + template + three-pipeline model) |
-| Failure Modes Catalog | 12 | complete |
-| SoTA Annotations | 10 | complete |
+| Section | Item Count | Lifecycle | Status |
+|---------|------------|-----------|--------|
+| Design Rationale Records (DRR) | 4 | Shape | complete |
+| Distinctions | 10 | Shape | complete |
+| Roles | 6 | Shape | complete |
+| Physical Principles | 5 | Shape | complete |
+| System Principles | 7 | Shape | complete |
+| Innovation Principles | 4 | Shape | complete |
+| Org Principles | 4 | Shape | complete |
+| Drilling Principles | 2 | Shape | complete |
+| Waterflooding Principles | 2 | Shape | complete |
+| Methods | 10 | Shape | complete (index) |
+| Work Products | 3 | Shape | complete (methodology + template + three-pipeline model) |
+| Failure Modes Catalog | 12 | Shape | complete |
+| SoTA Annotations | 10 | Shape | complete |
 
 ---
 
@@ -207,3 +222,4 @@ Pack отвечает на вопросы:
 | 2026-02-19 | Начальная создание pack structure; агрегация 21 принципа | Асфандияров |
 | 2026-02-21 | Добавлена модель трёх конвейеров (WP.ThreePipelines); новые различения D.009, D.010; новая роль R.006 (Владелец стыка); расширен bounded context | — |
 | 2026-02-21 | Переопределена целевая система: нефть (не пласт); пласт/скважины/инфра — управляющие системы; обновлены bounded context v0.2.0, D.001, manifest | — |
+| 2026-02-22 | FPF compliance: добавлен DRR (01C, 4 записи DRR.001–004); обновлены lifecycle статусы (Explore/Shape/Evidence/Operate); добавлен FPF→SPF Bridge в manifest | Асфандияров |
