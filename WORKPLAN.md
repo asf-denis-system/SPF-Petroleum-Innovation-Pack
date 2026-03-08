@@ -10,7 +10,7 @@
 |---|-----|--------|---------------------|
 | SPI-W11-001 | Ревизия `pack/01-domain-contract` | pending | `01A..01D` взаимно согласованы; нет противоречий между контекстом, distinctions и rationale |
 | SPI-W11-002 | Сверка `pack/02-domain-entities` с `pack/03-methods` | done | `02C-methods-index.md` покрывает UP.M.001..010; у каждого метода есть валидные роли/объекты |
-| SPI-W11-003 | Обновление `pack/04-work-products` под цикл внедрения | in_progress | Актуализированы шаблоны 01..04; добавлены явные шаги контроля и отчётности |
+| SPI-W11-003 | Обновление `pack/04-work-products` под цикл внедрения | done | Актуализированы шаблоны 01..04; добавлены явные шаги контроля и отчётности |
 | SPI-W11-004 | Доработка `pack/05-failure-modes` и связка с методами | pending | Для ключевых failure modes есть привязка к методам и управленческим решениям |
 | SPI-W11-005 | Недельная интеграционная проверка Pack | pending | `00-pack-manifest.md`, `ontology.md` и разделы 01..07 согласованы по терминам и ссылкам |
 
@@ -136,7 +136,7 @@
 | РП | Статус | Основание |
 |---|---|---|
 | SPI-W11-002 | done | Синхронизированы роли/produces в `pack/02-domain-entities/02C-methods-index.md`; удалён template-tail `DOMAIN.M.<NNN>` |
-| SPI-W11-003 | in_progress | Закрыт must-fix минимум по `04-work-products`: исправлены ссылки квалификации, техредактура шаблона проекта, удалены `ВСТАВИТЬ Рис.`, обновлены метаданные версии |
+| SPI-W11-003 | done | Помимо must-fix, в `01..04` добавлен обязательный контур контроля/отчётности: недельный ритм, gate-решения `GO/NO-GO/PIVOT`, минимальный формат отчётов |
 
 ### Артефакты (capture)
 
@@ -144,6 +144,8 @@
 2. `pack/04-work-products/04-work-ledger-template.md` — квалификационная ссылка переведена на `UP.M.007` и `UP.M.008`.
 3. `pack/04-work-products/02-innovation-project-template.md` — устранены критичные опечатки и формулировки в полях шаблона.
 4. `pack/04-work-products/01-innovation-implementation-methodology.md` — удалены placeholder-маркеры рисунков.
+5. `pack/04-work-products/03-three-pipeline-model.md` — добавлен единый операционный цикл контроля и отчётности по трём конвейерам.
+6. `pack/04-work-products/02-innovation-project-template.md`, `01-innovation-implementation-methodology.md`, `04-work-ledger-template.md` — добавлены явные шаги контроля, частота отчётности и минимальная структура отчётов.
 
 ### Git фиксация
 
