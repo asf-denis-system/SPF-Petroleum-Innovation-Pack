@@ -1,56 +1,57 @@
-# Tools Index Template
+# Tools Index: Upstream Petroleum Development
 
-This file provides a navigable index of tools relevant to this domain.
-
----
-
-## What is a Tool?
-
-Per FPF: A **tool** is an artifact (physical or digital) that enables or facilitates the performance of a method. Tools are used; methods are performed.
-
-A tool is NOT:
-- A method (tools support methods)
-- A work product (work products are outputs; tools are enablers)
-- A skill (skills are in the agent; tools are external)
+Навигационный индекс инструментов, используемых в методах `UP.M.001..010`.
 
 ---
 
-## Tools by Category
+## Что такое tool в этом Pack
 
-### Category 1: _Category Name_
+Tool — внешний артефакт (программный, физический, методический), который помогает выполнить метод.
 
-| Tool Name | Supports Methods | Type |
-|-----------|------------------|------|
-| _Tool 1_ | M.001, M.002 | software / physical / conceptual |
-
-### Category 2: _Category Name_
-
-| Tool Name | Supports Methods | Type |
-|-----------|------------------|------|
-| _Tool 2_ | M.003 | software / physical / conceptual |
+Tool не равен:
+- методу (`UP.M.*`);
+- рабочему продукту (`WP.*`);
+- роли (`R.*`).
 
 ---
 
-## Tool Entry Format (If Detailed Descriptions Needed)
+## Инструменты по категориям
 
-### Tool Name
+### 1) Геология и моделирование пласта
 
-**Type**: software | physical | conceptual
+| Tool | Supports Methods | Type | Назначение |
+|------|------------------|------|------------|
+| Геологический симулятор (Petrel class) | UP.M.001, UP.M.002 | software | Сбор геомодели, сценарный анализ |
+| Гидродинамический симулятор (tNavigator/ECL class) | UP.M.002, UP.M.003, UP.M.004 | software | Прогнозы и проверка взаимовлияний |
+| Интерпретация ПГИ/ГИС | UP.M.001, UP.M.005 | software + physical | Верификация зон притока/водопритока |
 
-**Purpose**: _What this tool enables._
+### 2) Промысловый мониторинг и контроль
 
-**Supports methods**:
-- [DOMAIN.M.XXX](../03-methods/DOMAIN.M.XXX.md)
+| Tool | Supports Methods | Type | Назначение |
+|------|------------------|------|------------|
+| SCADA/историк (PI class) | UP.M.005, UP.M.006 | software | Ряды давления, дебитов, событий |
+| Манометрия/дебитометрия | UP.M.005, UP.M.010 | physical | Фактические измерения для верификации |
+| Балансовые дашборды | UP.M.004, UP.M.006 | software | Контроль энергетики и отклонений |
 
-**Alternatives**: _Other tools that serve similar purpose._
+### 3) Инновации и пилотирование
 
-**Notes**: _Any caveats, versioning, or selection criteria._
+| Tool | Supports Methods | Type | Назначение |
+|------|------------------|------|------------|
+| Матрица применимости технологии | UP.M.007 | conceptual | Сопоставление технологии и состояния системы |
+| Пилотный протокол с gate-критериями | UP.M.008 | conceptual | Управление `GO/NO-GO/PIVOT` |
+| Реестр lessons learned | UP.M.006, UP.M.010 | software + conceptual | Накопление проверок принципов |
+
+### 4) Work/экономический мост
+
+| Tool | Supports Methods | Type | Назначение |
+|------|------------------|------|------------|
+| Register Bridge | UP.M.005, UP.M.010 | conceptual | Формальный перевод `SW -> OpEx` |
+| Work-Ledger шаблон | UP.M.005, UP.M.006 | conceptual | Еженедельный контроль переходов |
 
 ---
 
-## Notes on Tool Documentation
+## Правила ведения индекса
 
-- Tools are indexed, not deeply documented (unless domain-specific)
-- Generic tools (spreadsheets, text editors) need not be listed
-- Focus on tools that are specific to this domain's methods
-- Tool recommendations (which tool to use) belong downstream, not here
+- В индекс включаются только доменно-значимые инструменты.
+- Названия инструментов допускаются классами (не обязательно vendor-specific).
+- Любой новый tool должен быть привязан минимум к одному `UP.M.*`.

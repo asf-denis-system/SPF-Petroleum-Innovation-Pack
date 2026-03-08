@@ -47,7 +47,7 @@ maintainers:
   - name: Д. Асфандияров
     contact: asf@example.ru
 created: 2026-02-19
-last_updated: 2026-02-19
+last_updated: 2026-03-08
 ```
 
 ---
@@ -169,20 +169,19 @@ Pack отвечает на вопросы:
 | Section | Item Count | Lifecycle | Status |
 |---------|------------|-----------|--------|
 | Design Rationale Records (DRR) | 4 | Shape | complete |
-| Distinctions | 10 | Shape | complete |
+| Distinctions | 11 | Shape | complete |
 | Roles | 6 | Shape | complete |
 | Physical Principles | 5 | Shape | complete |
-| System Principles | 7 | Shape | complete |
+| System Principles | 3 | Shape | complete |
 | Innovation Principles | 4 | Shape | complete |
-| Org Principles | 4 | Shape | complete |
-| Drilling Principles | 2 | Shape | complete |
-| Waterflooding Principles | 2 | Shape | complete |
+| Org Principles | 2 | Shape | complete |
 | Work Principles (OA.EW) | 2 | Shape | complete (OA.EW.001–002) |
 | Register Bridge | 1 | Shape | complete (01D-register-bridge.md) |
 | Methods | 10 | Shape | complete (index) |
-| Work Products | 5 | Shape | complete (methodology + template + three-pipelines + register bridge + work ledger) |
-| Failure Modes Catalog | 13 | Shape | complete (incl. FM.EW.001) |
-| SoTA Annotations | 10 | Shape | complete |
+| Work Products | 4 | Shape | complete (01..04 in `04-work-products/`) |
+| Navigation Maps | 1 | Shape | complete (`07-map/01-upstream-full-pack-map.md`) |
+| Failure Modes Catalog | 14 | Shape | complete (incl. FM.EW.001–002) |
+| SoTA Annotations | 9 | Shape | complete |
 
 ---
 
@@ -194,6 +193,7 @@ Pack отвечает на вопросы:
 | SP | System Principle | Системное свойство разработки | `02-domain-entities/` |
 | IP | Innovation Principle | Принцип применения инноваций | `02-domain-entities/` |
 | OP | Org Principle | Организационный принцип | `02-domain-entities/` |
+| EW | Economic Work Principle | Принципы удельного Work и экономического моста | `02-domain-entities/` |
 
 ---
 
@@ -207,13 +207,18 @@ Pack отвечает на вопросы:
 | UP.PP.002 | Флюиды текут по градиентам | PP | Нефть, газ, вода идут в сторону меньшего давления по пути наименьшего сопротивления | draft |
 | UP.PP.003 | Пласт гетерогенен | PP | Нет среднего пласта; есть зоны проницаемости, барьеры, трещины, линзы | draft |
 | UP.PP.004 | Неопределённость неустранима | PP | Подземное пространство наблюдается косвенно; наблюдаемость редкая и через шум | draft |
+| UP.PP.005 | Вторые принципы вытекают из физики | PP | Принципы формулируются как следствия физических законов, не как советы | draft |
 | UP.SP.001 | Вмешательство меняет траекторию | SP | Любое действие (скважина, ППД, ГРП) изменяет распределение параметров системы | draft |
 | UP.SP.002 | Запаздывание реакции | SP | Пласт реагирует с задержкой; эффект может проявиться через месяцы или годы | draft |
 | UP.SP.003 | Система ищет равновесие | SP | После вмешательства пласт перестраивается; траектория зависит от начальных условий | draft |
 | UP.IP.001 | Технология ≠ эффект | IP | Результат определяется состоянием целевой системы, а не только технической новизной | draft |
 | UP.IP.002 | Масштаб критичен | IP | Лабораторная правда, модельная правда и полевая правда различаются | draft |
 | UP.IP.003 | Инновация увеличивает вариативность | IP | Новое ГТМ расширяет пространство возможных состояний и неопределённость | draft |
+| UP.IP.004 | Универсальных решений не существует | IP | Применимость технологии ограничена состоянием и контекстом системы | draft |
 | UP.OP.001 | KPI меняют поведение | OP | Метрика определяет выбор разработчика и траекторию развития месторождения | draft |
+| UP.OP.002 | Информация теряется при передаче | OP | Потеря контекста между ролями и уровнями решений искажает управление | draft |
+| UP.EW.001 | Удельный Work перехода | EW | Затраты оцениваются по переходам конвейера в физических и экономических регистрах | draft |
+| UP.EW.002 | Обводнённость как мультипликатор | EW | Рост WC нелинейно увеличивает удельные затраты на тонну нефти | draft |
 
 ---
 
@@ -226,3 +231,4 @@ Pack отвечает на вопросы:
 | 2026-02-21 | Переопределена целевая система: нефть (не пласт); пласт/скважины/инфра — управляющие системы; обновлены bounded context v0.2.0, D.001, manifest | — |
 | 2026-02-22 | FPF compliance: добавлен DRR (01C, 4 записи DRR.001–004); обновлены lifecycle статусы (Explore/Shape/Evidence/Operate); добавлен FPF→SPF Bridge в manifest | Асфандияров |
 | 2026-02-22 | Economic Work extension: Register Bridge (01D), Work-Ledger шаблон (WP.04), OA.EW.001–002, FM.EW.001 — разделение физического и экономического регистров | Асфандияров |
+| 2026-03-08 | Интеграционная синхронизация W11: заполнены ontology/tools/map, выровнены content-summary и entity-index под фактический состав Pack | Асфандияров |

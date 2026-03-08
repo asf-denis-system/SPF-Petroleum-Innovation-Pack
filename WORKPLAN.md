@@ -12,7 +12,7 @@
 | SPI-W11-002 | Сверка `pack/02-domain-entities` с `pack/03-methods` | done | `02C-methods-index.md` покрывает UP.M.001..010; у каждого метода есть валидные роли/объекты |
 | SPI-W11-003 | Обновление `pack/04-work-products` под цикл внедрения | done | Актуализированы шаблоны 01..04; добавлены явные шаги контроля и отчётности |
 | SPI-W11-004 | Доработка `pack/05-failure-modes` и связка с методами | done | Для ключевых failure modes есть привязка к методам и управленческим решениям |
-| SPI-W11-005 | Недельная интеграционная проверка Pack | pending | `00-pack-manifest.md`, `ontology.md` и разделы 01..07 согласованы по терминам и ссылкам |
+| SPI-W11-005 | Недельная интеграционная проверка Pack | done | `00-pack-manifest.md`, `ontology.md` и разделы 01..07 согласованы по терминам и ссылкам |
 
 ## План на сегодня (2026-03-08)
 
@@ -182,6 +182,23 @@
 2. `pack/01-domain-contract/01B-distinctions.md` — исправлены ссылки на актуальные FM/SoTA, уточнены связи методов и WP, устранены опечатки.
 3. `pack/01-domain-contract/01C-design-rationale.md` — формализована эквивалентность `OA.* <-> UP.*`, уточнён статус покрытия FM по инвариантам.
 4. `pack/01-domain-contract/01D-register-bridge.md` — устранён конфликт ресурсного кода (`RES.AM` -> `RES.DG`), обновлена версия.
+
+## Close Capture (2026-03-08, SPI-W11-005)
+
+### Что закрыто
+
+| РП | Статус | Основание |
+|---|---|---|
+| SPI-W11-005 | done | Проведена интеграционная синхронизация Pack: заполнены `ontology.md` и `02D-tools-index.md`, добавлена рабочая map, выровнены manifest/ID-ссылки/индексы |
+
+### Артефакты (capture)
+
+1. `pack/ontology.md` — заменён шаблон на рабочую онтологию домена (`entity types`, glossary, relations, cross-pack terms).
+2. `pack/02-domain-entities/02D-tools-index.md` — заполнен реальный индекс инструментов по методам `UP.M.001..010`.
+3. `pack/07-map/01-upstream-full-pack-map.md` — добавлена рабочая навигационная карта Pack (full-pack scope).
+4. `pack/00-pack-manifest.md` — обновлены `last_updated`, `Content Summary`, `Extended Kinds`, `Entity Index`, `Change Log`.
+5. `pack/02-domain-entities/02B-objects-of-attention.md` — добавлен `OA.PP.005` в `Objects of Attention Index`.
+6. `pack/03-methods/05..08,10` — исправлены невалидные `FM.*` и `UP.PP.*` ссылки на актуальные ID.
 
 ## Бэклог из W10 (источник задач)
 

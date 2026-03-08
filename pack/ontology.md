@@ -1,74 +1,76 @@
-# Ontology: [Domain Name]
+# Ontology: Upstream Petroleum Development
 
-> Domain ontology per SPF.SPEC.002.
-> Complete registry of entity types, key terms, and relationships for this Pack.
-> Each concept MUST link to a parent concept from SPF base ontology (SPF.SPEC.002, Section 2).
+> Domain ontology per SPF.SPEC.002.  
+> Реестр типов сущностей, ключевых терминов и связей для `upstream-petroleum`.
 
 ---
 
 ## 1. Entity Types
 
-> All entity types used in this Pack: base (from SPF) + extended (defined by this Pack).
-> **Mandatory column "FPF/SPF Concept"** — parent concept from SPF base ontology.
-
-| Code | Type | FPF/SPF Concept | Definition | ≠ (what it is NOT) | Source |
-|------|------|-----------------|------------|---------------------|--------|
-| `M` | Method | U.Method | _TBD_ | ≠ scenario, ≠ tool | SPF (base) |
-| `WP` | Work Product | U.Work + U.Episteme | _TBD_ | ≠ method description | SPF (base) |
-| `FM` | Failure Mode | — (SPF-specific) | _TBD_ | ≠ code bug | SPF (base) |
-| `D` | Distinction | A.7 Strict Distinction | _TBD_ | ≠ fact, ≠ definition | SPF (base) |
-| `R` | Role | U.RoleAssignment | _TBD_ | ≠ person, ≠ job title | SPF (base) |
-| `CHR` | Characteristic | U.Characteristic | _TBD_ | ≠ metric, ≠ indicator | SPF (base) |
-| `SOTA` | SoTA Annotation | — (SPF-specific) | _TBD_ | ≠ literature review | SPF (base) |
-| `MAP` | Map | U.Episteme | _TBD_ | ≠ content | SPF (base) |
-| _`EXT`_ | _Extended Type_ | _{U.* concept}_ | _TBD_ | _TBD_ | Pack (extended) |
+| Code | Type | FPF/SPF Concept | Definition | Not this | Source |
+|------|------|-----------------|------------|----------|--------|
+| `OA` | Object of Attention | U.System / U.State / U.Characteristic | Второй принцип или ключевой объект наблюдения в домене (физика, системность, инновации, орг-контур, Work) | Не метод, не KPI-отчёт | SPF pack |
+| `M` | Method | U.Method | Повторяемый способ анализа/управления, который производит рабочий продукт | Не инструмент, не роль | SPF base |
+| `WP` | Work Product | U.Work + U.Episteme | Артефакт-доказательство результата метода | Не сам метод | SPF base |
+| `FM` | Failure Mode | SPF-specific | Типовая ошибка интерпретации/применения принципов | Не баг кода | SPF pack |
+| `D` | Distinction | A.7 Strict Distinction | Жёсткое различение для правильной инженерной интерпретации | Не факт измерения | SPF base |
+| `R` | Role | U.RoleAssignment | Функциональная роль агента в конвейере решений | Не конкретный человек | SPF base |
+| `SOTA` | SoTA Annotation | SPF-specific | Аннотация зрелости знания и практики по принципу | Не обзор литературы в полном объёме | SPF pack |
+| `MAP` | Navigation Map | U.Episteme | Навигационный слой по структуре Pack и связям сущностей | Не источник доменного знания | SPF pack |
+| `BRG` | Register Bridge | U.Episteme + U.Work | Формальная связь физического и экономического регистров (`SW -> OpEx`) | Не финансовая модель компании | Pack extension |
 
 ---
 
 ## 2. Domain Glossary
 
-> Key domain terms with definitions. Only terms essential for understanding this domain.
-> **Mandatory column "Parent Concept (SPF)"** — which universal concept from SPF base ontology this term belongs to.
-
 | Term | Definition | Parent Concept (SPF) | Related entity |
 |------|-----------|---------------------|----------------|
-| _Term 1_ | _Definition (1-2 sentences)_ | _U.System / U.Method / ..._ | _DOMAIN.XXX.NNN_ |
-| _Term 2_ | _Definition_ | _U.*_ | — |
+| Состояние нефти | Измеримый факт о стадии целевого продукта в конвейере | U.State | `D.010`, `OA.PP.*` |
+| Переход | Смена состояния нефти между узлами цепочки с явным DoD | U.Dynamics | `WP.ThreePipelines` |
+| Стык | Граница перехода, где концентрируются потери и неопределённость | U.System boundary | `R.006`, `INV.006` |
+| Baseline | Исходные потери/метрики до вмешательства для GO/NO-GO | U.Episteme | `INV.005`, `WP.Pilot` |
+| Gate-решение | Формализованное `GO / NO-GO / PIVOT` | U.Control | `UP.M.008`, `UP.M.006` |
+| Work-регистр (физический) | Удельные физические затраты перехода (`SW`, `eta`, `WC`) | U.Work | `OA.EW.001`, `OA.EW.002` |
+| Экономический регистр | Денежная интерпретация Work через bridge-параметры | U.Work + U.Episteme | `01D-register-bridge.md` |
 
 ---
 
 ## 3. Relationships Between Types
 
-> How entity types relate to each other in this domain.
-
 | Subject | Relationship | Object | Example |
 |---------|-------------|--------|---------|
-| Method | produces → | Work Product | _DOMAIN.M.001 → DOMAIN.WP.001_ |
-| Failure Mode | violates ← | Method | _DOMAIN.FM.001 ← DOMAIN.M.001_ |
-| _Extended type_ | _relationship_ | _type_ | _example_ |
+| Role (`R`) | performs -> | Method (`M`) | `R.002` performs `UP.M.002/003/004` |
+| Method (`M`) | produces -> | Work Product (`WP`) | `UP.M.003` produces `WP.Matrix` |
+| Method (`M`) | evaluates -> | Object of Attention (`OA`) | `UP.M.007` evaluates `OA.IP.001..003` |
+| Failure Mode (`FM`) | violates -> | Invariant (`INV`) | `FM.IP.003` violates `INV.002` |
+| Distinction (`D`) | constrains interpretation of -> | Method (`M`) | `D.011` constrains `UP.M.005` and bridge interpretation |
+| Work Product (`WP`) | proves transition in -> | Oil pipeline stage | `WP.Monitor` + `WP.Pilot` support gate decision |
+| Bridge (`BRG`) | transforms -> | Physical -> Economic register | `SW_lift -> OpEx_lift` in `01D` |
 
 ---
 
-## 4. Type Hierarchy (optional)
+## 4. Type Hierarchy (Domain View)
 
-> If types have subtypes or specializations, document here.
-
+```text
+OA
+|- OA.PP (Physical Principles)
+|- OA.SP (System Principles)
+|- OA.IP (Innovation Principles)
+|- OA.OP (Organizational Principles)
+`- OA.EW (Economic Work Principles)
 ```
-Base Type
-├── Subtype A
-└── Subtype B
-```
 
 ---
 
-## 5. Cross-Pack Terms (optional)
+## 5. Cross-Pack Terms
 
-> Terms shared with or borrowed from other Packs.
-
-| This Pack's term | Related Pack | Term there |
-|-----------------|-------------|------------|
-| _Term_ | _Pack ID_ | _Term/entity_ |
+| This Pack term | Related Pack | Term there |
+|----------------|--------------|------------|
+| Production Layer | FPF/SPF | SPF over FPF (DRR.003) |
+| Boundary Ledger | FPF | CC-B1.6.1 |
+| Delta_work additivity | FPF | B.1.6 |
+| Strict Distinction | FPF | A.7 |
 
 ---
 
-_Ontology per SPF.SPEC.002. Pack ID: [ID]_
+_Ontology per SPF.SPEC.002. Pack ID: upstream-petroleum_
