@@ -50,6 +50,9 @@ generated: false
 | [UP.M.008](../03-methods/08-UP.M.008-pilot-design.md) | Дизайн пилота | WP.Pilot | UP.M.007 |
 | [UP.M.009](../03-methods/09-UP.M.009-kpi-impact.md) | Анализ KPI | WP.KPIAnalysis | WP.Scenario |
 | [UP.M.010](../03-methods/10-UP.M.010-principle-verification.md) | Верификация принципа | WP.Verification | UP.M.005, UP.M.006 |
+| [UP.M.011](../03-methods/11-UP.M.011-innovation-project-retrospective.md) | Ретроспектива проекта | WP.RetroProject | WP.Pilot, WP.Innovation, UP.M.005 |
+| [UP.M.012](../03-methods/12-UP.M.012-program-retrospective-analysis.md) | Ретроспектива программы | WP.RetroProgram | WP.RetroProject, WP.ThreePipelines |
+| [UP.M.013](../03-methods/13-UP.M.013-project-prioritization.md) | Приоритезация проектов | WP.PriorityPortfolio | WP.Innovation, WP.ThreePipelines |
 
 ### 4. Work Products
 
@@ -58,6 +61,9 @@ generated: false
 | [WP.Innovation](../04-work-products/02-innovation-project-template.md) | Каркас инновационного проекта | UP.M.007, UP.M.008 | UP.M.006, UP.M.009 |
 | [WP.ThreePipelines](../04-work-products/03-three-pipeline-model.md) | Операционная модель 3 конвейеров | UP.M.003, UP.M.006 | Governance / weekly review |
 | [WP.WorkLedger](../04-work-products/04-work-ledger-template.md) | Учёт Work по переходам | UP.M.005 | UP.M.006, UP.M.010 |
+| [WP.RetroProject](../04-work-products/05-innovation-project-retrospective-template.md) | Ретроспектива инновационного проекта | UP.M.011 | UP.M.012, governance review |
+| [WP.RetroProgram](../04-work-products/06-program-retrospective-template.md) | Ретроспектива программы проектов | UP.M.012 | Portfolio / program decisions |
+| [WP.PriorityPortfolio](../04-work-products/07-project-prioritization-template.md) | Портфель приоритизации проектов | UP.M.013 | Portfolio committee / stage-2 prioritization |
 | [BRG.Register](../01-domain-contract/01D-register-bridge.md) | Мост физика -> экономика | UP.M.005, UP.M.010 | WP.WorkLedger |
 
 ### 5. Failure Modes

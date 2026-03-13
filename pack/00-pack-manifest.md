@@ -47,7 +47,7 @@ maintainers:
   - name: Д. Асфандияров
     contact: asf@example.ru
 created: 2026-02-19
-last_updated: 2026-03-08
+last_updated: 2026-03-13
 ```
 
 ---
@@ -177,8 +177,8 @@ Pack отвечает на вопросы:
 | Org Principles | 2 | Shape | complete |
 | Work Principles (OA.EW) | 2 | Shape | complete (OA.EW.001–002) |
 | Register Bridge | 1 | Shape | complete (01D-register-bridge.md) |
-| Methods | 10 | Shape | complete (index) |
-| Work Products | 4 | Shape | complete (01..04 in `04-work-products/`) |
+| Methods | 13 | Shape | complete (index + retrospective layer + prioritization) |
+| Work Products | 7 | Shape | complete (01..07 in `04-work-products/`) |
 | Navigation Maps | 1 | Shape | complete (`07-map/01-upstream-full-pack-map.md`) |
 | Failure Modes Catalog | 14 | Shape | complete (incl. FM.EW.001–002) |
 | SoTA Annotations | 9 | Shape | complete |
@@ -233,3 +233,5 @@ Pack отвечает на вопросы:
 | 2026-02-22 | Economic Work extension: Register Bridge (01D), Work-Ledger шаблон (WP.04), OA.EW.001–002, FM.EW.001 — разделение физического и экономического регистров | Асфандияров |
 | 2026-03-08 | Интеграционная синхронизация W11: заполнены ontology/tools/map, выровнены content-summary и entity-index под фактический состав Pack | Асфандияров |
 | 2026-03-10 | Синхронизация diagnostic-layer: добавлен DRR.005 про ГДИ как метод vs контур, обновлён tools index и bounded context | Асфандияров |
+| 2026-03-13 | Добавлен retrospective-layer: методы `UP.M.011..012` и шаблоны `WP.RetroProject/WP.RetroProgram` на основе импортированных методик ретроспективы | Асфандияров |
+| 2026-03-13 | Добавлен метод `UP.M.013` и шаблон `WP.PriorityPortfolio` для problem-first приоритизации инновационных проектов | Асфандияров |

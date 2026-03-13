@@ -30,6 +30,12 @@
 | Стык | Граница перехода, где концентрируются потери и неопределённость | U.System boundary | `R.006`, `INV.006` |
 | Baseline | Исходные потери/метрики до вмешательства для GO/NO-GO | U.Episteme | `INV.005`, `WP.Pilot` |
 | Gate-решение | Формализованное `GO / NO-GO / PIVOT` | U.Control | `UP.M.008`, `UP.M.006` |
+| Problem-first приоритезация | Сначала оценка приоритета проблемного поля, затем оценка конкретного проекта | U.Control + U.Episteme | `UP.M.013`, `WP.PriorityPortfolio` |
+| Горизонт эффекта | Временной горизонт получения эффекта (`H1/H2/H3`) | U.Dynamics | `UP.M.013`, `WP.PriorityPortfolio` |
+| Корзина приоритета | Управленческая категория `P1..P4` по итоговому score | U.Control | `UP.M.013`, `WP.PriorityPortfolio` |
+| Ключевой разрыв | Локализованный сбой в цепочке `проблема -> технология -> испытание -> внедрение -> эффект` | U.Dynamics + U.Episteme | `UP.M.011`, `WP.RetroProject` |
+| Архитектура программы | Логика покрытия темы, состав подпроектов, очередность и интерфейсы между ними | U.System + U.Dynamics | `UP.M.012`, `WP.RetroProgram` |
+| Ретроспектива | Формализованный разбор завершенного цикла для получения повторно используемого знания и решений следующего цикла | U.Episteme + U.Control | `UP.M.011`, `UP.M.012` |
 | Work-регистр (физический) | Удельные физические затраты перехода (`SW`, `eta`, `WC`) | U.Work | `OA.EW.001`, `OA.EW.002` |
 | Экономический регистр | Денежная интерпретация Work через bridge-параметры | U.Work + U.Episteme | `01D-register-bridge.md` |
 
@@ -45,6 +51,7 @@
 | Failure Mode (`FM`) | violates -> | Invariant (`INV`) | `FM.IP.003` violates `INV.002` |
 | Distinction (`D`) | constrains interpretation of -> | Method (`M`) | `D.011` constrains `UP.M.005` and bridge interpretation |
 | Work Product (`WP`) | proves transition in -> | Oil pipeline stage | `WP.Monitor` + `WP.Pilot` support gate decision |
+| Work Product (`WP`) | prioritizes -> | Project pipeline stage | `WP.PriorityPortfolio` supports stage `Приоритизация` |
 | Bridge (`BRG`) | transforms -> | Physical -> Economic register | `SW_lift -> OpEx_lift` in `01D` |
 
 ---
