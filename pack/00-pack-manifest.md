@@ -1,5 +1,7 @@
 # Upstream Petroleum Development Pack — Manifest
 
+**Навигационная цепочка входа:** [Manifest](00-pack-manifest.md) → [Ontology](ontology.md) → [Full Pack Map](07-map/01-upstream-full-pack-map.md)
+
 **Область:** Управление состоянием пластовой системы в нефтегазовой разработке
 
 **Версия:** 0.1 (Research layer)  
