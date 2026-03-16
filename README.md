@@ -6,6 +6,8 @@
 >
 > **Версия:** 0.2 (Three Pipelines model)
 > **Статус:** 🟠 Активная разработка
+>
+> **Навигационная цепочка входа:** [Manifest](pack/00-pack-manifest.md) → [Ontology](pack/ontology.md) → [Full Pack Map](pack/07-map/01-upstream-full-pack-map.md)
 
 ---
 
