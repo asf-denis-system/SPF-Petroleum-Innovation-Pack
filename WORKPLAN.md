@@ -1,4 +1,4 @@
-# WORKPLAN: SPF-Petroleum-Innovation-Pack
+# WORKPLAN: PACK-petroleum-innovation
 
 > Рабочие продукты для Pack по нефтегазовым инновациям.
 > Сегодня: 2026-03-08.
