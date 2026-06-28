@@ -1,15 +1,24 @@
 # Тип репозитория
 
-**Тип**: `Pack`  
-**Source-of-truth**: yes (доменное знание в bounded context `upstream-petroleum`)
+**Тип**: `Domain Principle Framework (DPF)`
+**Source-of-truth**: yes, для предметных принципов в bounded context `petroleum-innovation`
+**Статус**: draft; каталог `pack/` является текущим носителем материалов DPF
+
+## Назначение
+
+Репозиторий описывает повторяющиеся проблемные ситуации, сильные рабочие ходы,
+типовые ошибки и границы применимости при создании, испытании, внедрении и
+масштабировании инноваций в upstream-нефтедобыче.
 
 ## Upstream dependencies
 
-- SPF framework: https://github.com/TserenTserenov/SPF
 - FPF: https://github.com/ailev/FPF
+- Общий нефтяной DPF: https://github.com/asf-denis-system/SPF-Petroleum
 
 ## Non-goals
 
-- НЕ содержит process/spec/lint — это в SPF (upstream)
-- НЕ является курсом/гайдом/обучением (это downstream)
-- НЕ содержит кода/сервисов
+- НЕ является DPF нефтяной отрасли в целом
+- НЕ заменяет геологию, разработку месторождений и другие инженерные дисциплины
+- НЕ задаёт локальные регламенты конкретной компании или проекта; это уровень LPF
+- НЕ является курсом или учебной программой
+- НЕ содержит программных сервисов
