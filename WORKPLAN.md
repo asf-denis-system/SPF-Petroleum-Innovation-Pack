@@ -4,6 +4,21 @@
 > Сегодня: 2026-03-08.
 > Недельный горизонт: W11 (2026-03-09..2026-03-15).
 
+## DPF-architecture backlog 2026-09-04
+
+**Рабочая гипотеза:** самостоятельный `Petroleum Innovation DPF` в составе кандидатной `Petroleum DPF Suite` — ведущий вариант, но окончательная граница продукта не выбрана. Альтернативы и проверка зафиксированы в `docs/PFAD-001-petroleum-technology-development-framework-boundary.md`. Репозиторий остаётся физически отдельным; задачи не активируются до стратегического review 1–3 октября 2026 года.
+
+| # | РП | Статус | Критерий готовности |
+|---|---|---|---|
+| SPI-W40-001 | Закрыть `PFAD-001` по границе фреймворка | planned; after 2026-10-01 review | Выполнены точное вычитание общих DPF, проверка не менее трёх репрезентативных случаев и сравнение допустимых исходов; рекомендация, основания и её явное принятие или отклонение записаны в DRR |
+| SPI-W40-002 | Зафиксировать карту внешних зависимостей выбранного продукта | planned; after PFAD-001 outcome | Для FPF Core, Systems Engineering, Method Engineering, Operations Management, Problem Structuring и нефтяного company-контекста указаны точные получаемые результаты, edition/currentness и границы; общие инженерные методы не дублируются |
+| SPI-W40-003 | Провести DPF package-adequacy gate | planned; only if DPF selected | Пакет проверен по FPF `E.4.DPF.DA` и профилю публикации `E.11.PFP`; статус честно ограничен `seedOnly`, `repairBeforeDPFUse` или принятым уровнем |
+| SPI-W40-004 | Подготовить решение о переименовании carrier-repo | planned; only if separate DPF selected | Собран impact-map для `PACK-petroleum-innovation` → `DPF-petroleum-innovation`, включая README, REPO-TYPE, DS-strategy, `DS-system-BV-TV`, GitHub remote и внешние ссылки; rename не выполняется без отдельного решения |
+| SPI-W40-005 | Разобрать системную модель проблем, ТВ, потенциала и плана добычи | planned; with PFAD-001 after 2026-10-01 review | Составлена матрица распределения по FPF / Operations Management DPF / кандидатному Petroleum DPF / company LPF / reject-or-revise; отдельно проверены шкала `P0–P5`, нелинейность `G0–G8`, условия суммирования нефтяных эффектов и статус программы тиражирования; принятые результаты отражены в `PFAD-001` |
+| SPI-W36-001 | Принять и сохранить архитектурную записку | done | Предметный источник сохранён в `docs/petroleum-technology-development-architecture-note.md`, связан из README и не представлен как готовая DPF edition или принятое решение о границе |
+| SPI-W36-002 | Открыть решение о границе фреймворка | done | В `docs/PFAD-001-petroleum-technology-development-framework-boundary.md` зафиксированы вопрос, допустимые исходы, вычитание, критерии, случаи и срок решения |
+| SPI-W36-003 | Сохранить системную модель как входной материал | done | Исходный документ от 2026-09-05 сохранён без содержательной адаптации в `docs/sources/2026-09-05-system-model-problems-tv-potential-production-plan.md` и связан из README |
+
 ## План на неделю (W11: 2026-03-09..2026-03-15)
 
 | # | РП | Статус | Критерий готовности |
